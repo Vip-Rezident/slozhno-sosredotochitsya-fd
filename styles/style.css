@@ -18,9 +18,9 @@ display: grid;
 grid-template-rows: 1fr 1fr 1fr;
 }
 
-.item {
-  align-self: center;
-  justify-self: start;
+.header__theme-menu{
+  align-self: flex-start;
+  justify-self: right;
 }
 
 .title{
@@ -39,4 +39,30 @@ font-size: 18px;
 color: #000028;
 font-style: bold;
 font-family: var(--font-family);
+}
+
+.card-section{
+  стили для всех секций
+}
+
+.card{
+  display: grid;
+}
+
+.card-title{
+
+}
+
+.card-list{
+display: grid;
+justify-content: center;
+}
+
+.section picture{
+  display: grid;
+  grid-template-rows: minmax(375px);
+}
+
+.picture__card{
+  width: 100%;
 }
