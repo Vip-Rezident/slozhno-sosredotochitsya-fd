@@ -60,9 +60,28 @@ justify-content: center;
 
 .section picture{
   display: grid;
-  grid-template-rows: minmax(375px);
+  width: 375px;
+  height: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .picture__card{
+  gap: 10px;
   width: 100%;
+}
+
+.title p{
+ display: grid;
+ grid-auto-flow: column; 
+}
+
+.footer{
+  display: grid;
+  grid-auto-flow: column; /* Указывает, что элементы должны располагаться в строках */
+  gap: 13px; /* Расстояние между элементами */
+  height: 100vh; /* Высота блока равна высоте окна браузера */
+  min-height: 707px; /* Минимальная высота блока */ 
 }
