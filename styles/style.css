@@ -5,7 +5,7 @@
   --acccent-color-spec:#ff0070;
   --color-spec-element:rgba(255,0 ,112, .5);
   --text-color: #f1b2ce;
-  --font-family: 'IBM Plex Mono' sans-serif;
+  --font-family: 'IBM Plex mono' sans-serif;
   --title-color: #ab00ff;
 }
 
@@ -16,17 +16,36 @@
   background-attachment: fixed; /* Приклеили */
   background-repeat: no-repeat;
   background-color: var(--bg-color, #000028); /* Добавляем фоновый цвет */
-  font-family: var(--main-font-size, 1.125rem); /* Добавляем резиновый шрифт */
+  font-size: var(--main-font-size, 1.125rem); /* Добавляем резиновый шрифт */
+  font-family: var(--font-family, sans-serif);
+}
+
+.decorated-zone{
+  min-width: 375px;
+  min-height: 668px;
+  height: 100vh;
+  width: 100vh;
+}
+
+.content-section{
+  padding: 0 5vi; /* отступ с права и с лева */
+
 }
 
 .header{
 display: grid;
-grid-template-rows: 1fr 1fr 1fr;
+grid-template-rows: 1fr min-content 1fr;
+text-align: center;
+font-family: var(--font-family);
+justify-self:center;
+align-self:center;
+
 }
 
 .header__theme-menu{
   align-self: flex-start;
   justify-self: right;
+  font-family: var(--font-family);
 }
 
 .title{
@@ -37,6 +56,13 @@ color: #DB00FF;
 text-shadow: 4px 4px 0 var(--accent-color);
 font-style: bold;
 font-family: var(--font-family);
+
+}
+
+.title-card{ /* Заголовок 2 уровня */
+display: grid;
+font-size: 18px;
+font-weight: 700;
 }
 
 .title-decor {
@@ -47,24 +73,34 @@ font-style: bold;
 font-family: var(--font-family);
 }
 
+
 .card-section{
-  стили для всех секций
+ font-size: 18px;
 }
 
-.card{
-  display: grid;
-}
-
-.card-title{
+.content__text-block{ /* блок */
+  font-size: 18px;
 
 }
 
-.card-list{
-display: grid;
-justify-content: center;
+.content__text-title{ /* Подзаголовок */
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.section picture{
+.content__paragraph{ /* Параграф */
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+.content__title-block{ /* Заголовок 3 уровня */
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+.section-picture{
   display: grid;
   width: 375px;
   height: 1400px;
@@ -74,10 +110,16 @@ justify-content: center;
   justify-content: center;
 }
 
+.section-picture .title-card:not(:last-of-type) {
+  margin-block-end: 1.5em;
+} 
+
 .picture__card{
   gap: 10px;
   width: 100%;
 }
+
+
 
 .title p{
  display: grid;
