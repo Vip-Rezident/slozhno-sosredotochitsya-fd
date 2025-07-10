@@ -1,16 +1,19 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 :root {
-  --dark-theme-bg-image: url('/images/cover-image-dark.png');
-  --accent-color:#FF0070;
-  --acccent-color-spec:#ff0070;
-  --color-spec-element:rgba(255,0 ,112, .5);
+  --dark-theme-bg-image: url("/images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --acccent-color-spec: #ff0070;
+  --color-spec-element: rgba(255, 0, 112, 0.5);
   --text-color: #f1b2ce;
-  --font-family: 'IBM Plex mono' sans-serif;
+  --font-family: "IBM Plex mono" sans-serif;
   --title-color: #ab00ff;
 }
 
-.page { /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
-  background-image: var(--dark-theme-bg-image, url('/images/cover-image-dark.png'));
+.page {
+  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  background-image: var(
+    --dark-theme-bg-image,
+    url("/images/cover-image-dark.png"));
   background-position: center; /* Центрируем изображение */
   background-size: cover; /* Растягиваем изображение, сохраняя пропорции */
   background-attachment: fixed; /* Приклеили */
@@ -20,116 +23,136 @@
   font-family: var(--font-family, sans-serif);
 }
 
-.decorated-zone{
+.decorated-zone {
   min-width: 375px;
   min-height: 668px;
-  height: 100vh;
-  width: 100vh;
+  padding: 0 5vi;
 }
 
-.content-section{
+.content-section {
   padding: 0 5vi; /* отступ с права и с лева */
-
 }
 
-.header{
-display: grid;
-grid-template-rows: 1fr min-content 1fr;
-text-align: center;
-font-family: var(--font-family);
-justify-self:center;
-align-self:center;
-
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  text-align: center;
+  font-family: var(--font-family);
+  justify-self: center;
+  align-self: center;
 }
 
-.header__theme-menu{
+.header__theme-menu {
   align-self: flex-start;
   justify-self: right;
   font-family: var(--font-family);
 }
 
-.title{
-align-self: center;
-justify-self: start;
-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-color: #DB00FF;
-text-shadow: 4px 4px 0 var(--accent-color);
-font-style: bold;
-font-family: var(--font-family);
+.title {
+  /* Заголовок 1 уровня */
+  align-self: center;
+  justify-self: start;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: #db00ff;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  font-family: var(--font-family);
+  line-height: .75;
+  margin-bottom: 55px;
+}
+.title__text{
+  display: block;
+  justify-self: left;
+  
 
 }
 
-.title-card{ /* Заголовок 2 уровня */
-display: grid;
-font-size: 18px;
-font-weight: 700;
+.title-card {
+  /* Заголовок 2 уровня */
+  display: grid;
+  font-size: 18px;
+  font-weight: 700;
+  color: #f1b2ce;
+  background-color: #ff0070;
+  margin-bottom: 10px;
 }
 
 .title-decor {
-background-color: var(--accent-color);
-font-size: 18px;
-color: #000028;
-font-style: bold;
-font-family: var(--font-family);
-}
-
-
-.card-section{
- font-size: 18px;
-}
-
-.content__text-block{ /* блок */
+  background-color: var(--accent-color);
   font-size: 18px;
-
+  color: #000028;
+  font-family: var(--font-family);
+  margin-bottom: 66px;
 }
 
-.content__text-title{ /* Подзаголовок */
+.card-section {
+  font-size: 18px;
+  color: #f1b2ce;
+  display: grid;
+  max-width: 375px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content__text-block {
+  /* блок */
+  font-size: 18px;
+}
+
+.content__text-title {
+  /* Подзаголовок */
+  color: #000028;
+  background-color: #ff0070;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-.content__paragraph{ /* Параграф */
+.content__paragraph {
+  /* Параграф */
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
-
+  margin-bottom: 20px;
 }
 
-.content__title-block{ /* Заголовок 3 уровня */
+.content__title-block {
+  /* Заголовок 3 уровня */
+  background-color: #ff0070;
+  color: #000028;
+  font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
-
+   margin-bottom: 10px;
 }
 
-.section-picture{
+.section-picture {
   display: grid;
   width: 375px;
-  height: 1400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.section-picture .title-card:not(:last-of-type) {
-  margin-block-end: 1.5em;
-} 
+.section-picture .picture__card:not(:last-of-type) {
+  margin-block-end: .5em;
+}
 
-.picture__card{
+.picture__card {
   gap: 10px;
   width: 100%;
 }
 
 
-
-.title p{
- display: grid;
- grid-auto-flow: column; 
-}
-
-.footer{
+.footer {
   display: grid;
   grid-auto-flow: column; /* Указывает, что элементы должны располагаться в строках */
   gap: 13px; /* Расстояние между элементами */
   height: 100vh; /* Высота блока равна высоте окна браузера */
-  min-height: 707px; /* Минимальная высота блока */ 
+  
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
