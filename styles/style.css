@@ -1,4 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+* {
+  outline: 1px solid red;
+}
+
 :root {
   --dark-theme-bg-image: url("/images/cover-image-dark.png");
   --accent-color: #ff0070;
@@ -77,12 +81,11 @@ border-bottom-color: currentColor;
 .decorated-zone {
   min-width: 375px;
   min-height: 668px;
-  padding: 0 5vi;
 }
+ 
+ /*.content-section {
+  padding: 0 5vi;  отступ с права и с лева */
 
-.content-section {
-  padding: 0 5vi; /* отступ с права и с лева */
-}
 
 .corner::before { /* верхний правый уголок */
   content: "";
