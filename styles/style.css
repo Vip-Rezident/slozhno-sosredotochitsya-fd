@@ -42,12 +42,13 @@
   color: var(--accent-color);
   justify-self: center;
   align-self: center;
+  max-width: 375px;
 }
 
 .header__theme-menu {
   align-self: flex-start;
   justify-self: right;
-  margin-top: 75px;
+  margin-block-start: 75px;
   
 }
 
@@ -83,8 +84,24 @@ border-bottom-color: currentColor;
   min-height: 668px;
 }
  
- /*.content-section {
-  padding: 0 5vi;  отступ с права и с лева */
+ .content-section {
+  display: grid;
+  justify-content: center;
+  min-width: 375px;
+ 
+ }
+  /*padding: 0 5vi;  отступ с права и с лева */
+
+  .favicon{
+  position: absolute;
+  content: "";
+  block-size: 9px;
+  inline-size: 9px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px #ff0070;
+  top: 18px;
+  right: 19px;
+  }
 
 
 .corner::before { /* верхний правый уголок */
@@ -110,15 +127,17 @@ border-bottom-color: currentColor;
   border-left: 1px solid #ff0070; /* Левая граница */
 }
 
-.rec-label { /* REC */
-  padding-right: 40px;
-  padding-top: 50px;
-  top: 30px;
+.rec { /* REC */
+   content: "";
+  right: 40px;
+  top: 50px;
   right: 40px;
   padding: 5px;
   color: #ff0070;
   font-size: 18px; /* Размер шрифта */
 }
+
+
 
 .title {
   /* Заголовок 1 уровня */
@@ -129,7 +148,7 @@ border-bottom-color: currentColor;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: 'IBM Plex mono';
   line-height: .85;
-  margin-bottom: 55px;
+  margin-block-end: 55px;
 }
 .title .title__union{
   display: block;
@@ -145,7 +164,7 @@ border-bottom-color: currentColor;
   font-weight: 700;
   color: #f1b2ce;
   background-color: #ff0070;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .title-decor {
@@ -154,7 +173,7 @@ border-bottom-color: currentColor;
   font-size: 18px;
   color: #000028;
   font-family: var(--font-family);
-  margin-bottom: 66px;
+  margin-block-end: 66px;
   
 }
 
@@ -183,7 +202,7 @@ border-bottom-color: currentColor;
   font-family: var(--font-family);
   font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-block-end: 10px;
 }
 
 .content__paragraph {
@@ -191,7 +210,7 @@ border-bottom-color: currentColor;
   font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
 }
 
 .content__title-block {
@@ -201,7 +220,7 @@ border-bottom-color: currentColor;
   font-family: var(--font-family);
   font-size: 18px;
   font-weight: 400;
-   margin-bottom: 10px;
+   margin-block-end: 10px;
 }
 
 .section-picture {
