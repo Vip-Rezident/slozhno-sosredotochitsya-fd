@@ -131,9 +131,7 @@ border-bottom-color: currentColor;
   content: "REC";
   color: #ff0070;
   right: 15px;
-  
   }
-
 
 .corner::before { /* верхний правый уголок */
   content: "";
@@ -145,10 +143,7 @@ border-bottom-color: currentColor;
   height: 25px; /* Высота уголка */
   border-top: 1px solid #ff0070; /* Верхняя граница */
   border-right: 1px solid #ff0070; /* Правая граница */
-
 }
-
-
 
 .corner::after { /* нижний левый уголок */
   content: "";
@@ -170,7 +165,7 @@ border-bottom-color: currentColor;
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: 'IBM Plex mono';
   line-height: .85;
-  margin-block-end: 55px;
+  margin-block-end: 20px;
   max-width: 375px;
 }
 .title .title__union{
@@ -192,10 +187,13 @@ border-bottom-color: currentColor;
 .title-decor {
   background-color: var(--accent-color);
   font-size: 18px;
+  font-weight: bold;
+  line-height: 1.6;
   color: #000028;
   font-family: var(--font-family);
-  margin-block-end: 66px;
-  max-width: 375px;
+  margin-block-end: 15px;
+  max-width: 355px;
+  height: 117px;
 }
 
 .card-section {
@@ -232,6 +230,7 @@ border-bottom-color: currentColor;
   /* Параграф */
   font-family: var(--font-family);
   font-size: 18px;
+  line-height: 1.8; /* Межстрочный */
   font-weight: 400;
   margin-block-end: 20px;
 }
@@ -248,21 +247,21 @@ border-bottom-color: currentColor;
 
 .section-picture {
   display: grid;
-  width: 375px;
-  display: flex;
+  max-width: 375px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   
 }
 
-.section-picture .picture__card:not(:last-of-type) {
+.section-picture .picture__card:not(:last-of-type) {/* У крайнего изоображения нет отступа */
   margin-block-end: .5em;
 }
 
 .picture__card {
   gap: 10px;
-  width: 95%;
+  width: 100%;
+  height: auto;
   
 }
 
