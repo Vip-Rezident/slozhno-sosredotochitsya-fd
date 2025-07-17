@@ -37,26 +37,27 @@
 
 .header {
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   font-family: var(--font-family);
   color: var(--accent-color);
   justify-self: center;
   align-self: center;
+  min-height: 668px;
   max-width: 375px;
-  padding: 0 10px;
+  padding: 10px;
 }
 
 .header__theme-menu {
-  display: flex;
+  display: grid;
   max-width: 375px;
   align-self: flex-start;
   justify-self: right;
-  margin-block-start: 75px;
+  margin-block-start: 60px;
 }
 
 .header__theme-menu-list{
-  margin-block-end: 71px;
- 
+  display: grid;
+  grid-gap: 12px;
 }
 
 .header__theme-menu-button{
@@ -65,6 +66,7 @@
   border: 1px solid transparent;
   padding: 2px 13px;
   cursor: pointer;
+  
 }
 
 .header__theme-menu-button_active{
@@ -87,33 +89,49 @@ border-bottom-color: currentColor;
 
 
 .decorated-zone {
-  max-width: 375px;
-  max-height: 668px;
+ block-size: 100vh;
+ min-block-size: 668px;
+}
+
+@media (width >= 768px) {
+  .decorated-block {
+    min-block-size: 1024px;
+    /* Остальные стили */
+  }
+}
+
+@media (width >= 1024px) {
+  .decorated-block {
+    min-block-size: 768px;
+    /* Остальные стили */
+  }
 }
  
  .content-section {
   display: grid;
   justify-content: center;
-  margin: 10px 0 10px;
+  max-width: 375px;
+  margin: 10px;
  }
 
 
   .rec {
   position: absolute;
+  right: 20px;
+  top: 20px;
   block-size: 9px;
   inline-size: 9px;
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px #ff0070;
   background-color: #ff0070;
-  top: 18px;
-  right: 19px;
   }
 
-  .rec::after {
+  .rec::before {
   position: absolute;
   content: "REC";
-  right: 20px;
-  top: -5px;
+  color: #ff0070;
+  right: 15px;
+  
   }
 
 
@@ -127,7 +145,10 @@ border-bottom-color: currentColor;
   height: 25px; /* Высота уголка */
   border-top: 1px solid #ff0070; /* Верхняя граница */
   border-right: 1px solid #ff0070; /* Правая граница */
+
 }
+
+
 
 .corner::after { /* нижний левый уголок */
   content: "";
