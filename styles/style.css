@@ -10,7 +10,7 @@
   --acccent-color-button: #ff0070;
   --color-spec-element: rgba(255, 0, 112, 0.5);
   --text-color: #f1b2ce;
-  --font-family: "IBM Plex mono" sans-serif;
+  --font-family: "IBM Plex mono", sans-serif;
   --title-color: #ab00ff;
   --font-size: 18px;
 }
@@ -163,7 +163,7 @@ border-bottom-color: currentColor;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: #db00ff;
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: 'IBM Plex mono';
+  font-family: var(--font-family, "IBM Plex mono"), sans-serif;
   line-height: .85;
   margin-block-end: 20px;
   max-width: 375px;
@@ -190,7 +190,7 @@ border-bottom-color: currentColor;
   font-weight: bold;
   line-height: 1.6;
   color: #000028;
-  font-family: var(--font-family);
+  font-family: var(--font-family, "IBM Plex mono"), sans-serif;
   margin-block-end: 15px;
   max-width: 355px;
   height: 117px;
