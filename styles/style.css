@@ -38,7 +38,7 @@
 
 .header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
   font-family: var(--font-family);
   color: var(--accent-color);
   justify-self: center;
@@ -219,10 +219,13 @@ border-bottom-color: currentColor;
 
 .content__text-title {
   /* Подзаголовок */
+  display: flex;
+  align-self: center;
+  justify-content: start;
   color: #000028;
   background-color: #ff0070;
   font-family: var(--font-family, "IBM Plex mono"), sans-serif;
-  line-height: .5; /* Межстрочный */
+  line-height: 1.3; /* Межстрочный */
   font-size: 18px;
   font-weight: 700;
 
@@ -231,10 +234,15 @@ border-bottom-color: currentColor;
 .content__paragraph {
   /* Параграф */
   font-size: 18px;
-  line-height: 1.3; /* Межстрочный */
+  line-height: 1.4; /* Межстрочный */
   font-weight: 400;
-  margin-top: 10px;
+  margin-block-start: 10px;
   
+}
+
+.link__text-paragrraph{
+  text-decoration: none;
+  text-shadow: 1px 2px #ff0070;
 }
 
 .content__title-block {
@@ -253,6 +261,7 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-block-start: 100px;
   
 }
 
