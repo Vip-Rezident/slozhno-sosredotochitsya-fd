@@ -38,11 +38,10 @@
 
 .header {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+  grid-template-rows: 1fr min-content 1fr;
   font-family: var(--font-family);
   color: var(--accent-color);
-  justify-self: center;
-  align-self: center;
+  justify-content: end;
   min-height: 668px;
   max-width: 375px;
   padding: 10px;
@@ -53,12 +52,12 @@
   max-width: 375px;
   align-self: flex-start;
   justify-self: right;
-  margin-block-start: 60px;
+  padding-block-start: 60px;
 }
 
 .header__theme-menu-list{
   display: grid;
-  grid-gap: 12px;
+  grid-gap: 8px;
 }
 
 .header__theme-menu-button{
@@ -81,7 +80,7 @@
 
 .header__theme-menu-button:focus{
   outline: none; /* Убираем стандартный контур фокуса */
-  border-bottom: 1px solid var(--acccent-color-button); /* Добавляем рамку снизу transform: translateX(20px); /* Сдвиг текста влево */*/
+  border-bottom: 1px solid var(--acccent-color-button); /* Добавляем рамку снизу transform: translateX(20px); /* Сдвиг текста влево */
 }
 
 .header__theme-menu-button:focus-visible{ 
@@ -92,6 +91,7 @@ border-bottom-color: currentColor;
 .decorated-zone {
  block-size: 100vh;
  min-block-size: 668px;
+
 }
 
 @media (width >= 768px) {
@@ -108,12 +108,6 @@ border-bottom-color: currentColor;
   }
 }
  
- .content-section {
-  display: grid;
-  justify-content: center;
-  max-width: 375px;
- }
-
 
   .rec {
   position: absolute;
@@ -130,11 +124,12 @@ border-bottom-color: currentColor;
   position: absolute;
   content: "REC";
   color: #ff0070;
-  right: 15px;
+  right: 19px;
+  top: -10px;
   
   }
 
-.corner::before { /* верхний правый уголок */
+.decorated-zone::before { /* верхний правый уголок */
   content: "";
   color: #ff0070;
   position: absolute;
@@ -146,7 +141,7 @@ border-bottom-color: currentColor;
   border-right: 1px solid #ff0070; /* Правая граница */
 }
 
-.corner::after { /* нижний левый уголок */
+.decorated-zone::after { /* нижний левый уголок */
   content: "";
   position: absolute;
   bottom: 10px;
@@ -156,6 +151,13 @@ border-bottom-color: currentColor;
   border-bottom: 1px solid #ff0070; /* Нижняя граница */
   border-left: 1px solid #ff0070; /* Левая граница */
 }
+
+ .content-section {
+  display: grid;
+  justify-content: center;
+  max-width: 375px;
+  padding: 0 10px;
+ }
 
 .title {
   /* Заголовок 1 уровня */
@@ -182,7 +184,7 @@ border-bottom-color: currentColor;
   font-weight: 700;
   color: var(--accent-color #f1b2ce);
   background-color: #ff0070;
-  margin-block-end: 10px;
+  margin-block-end: 5px;
 }
 
 .title-decor {
@@ -205,8 +207,7 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 40px 10px 0 10px;
-  
+  margin-top: 40px;
 }
 
 .content__text-block {
@@ -234,10 +235,10 @@ border-bottom-color: currentColor;
 .content__paragraph {
   /* Параграф */
   font-size: 18px;
-  line-height: 1.4; /* Межстрочный */
+  line-height: 1.3; /* Межстрочный */
   font-weight: 400;
-  margin-block-start: 10px;
-  
+  padding-block-start: 13px;
+  padding-block-end: 20px;
 }
 
 .link__text-paragrraph{
