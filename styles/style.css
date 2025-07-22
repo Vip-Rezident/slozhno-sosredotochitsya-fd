@@ -141,7 +141,7 @@ border-bottom-color: currentColor;
   border-right: 1px solid #ff0070; /* Правая граница */
 }
 
-.decorated-zone::after { /* нижний левый уголок */
+.header::after { /* нижний левый уголок */
   content: "";
   position: absolute;
   bottom: 10px;
@@ -168,7 +168,7 @@ border-bottom-color: currentColor;
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: .85;
   max-width: 375px;
-  margin-block-end: 30px;
+  padding-bottom: 50px;
 }
 
 .title .title__union{
@@ -194,9 +194,9 @@ border-bottom-color: currentColor;
   line-height: 1.6;
   color: #000028;
   font-family: var(--font-family, "IBM Plex mono"), sans-serif;
-  margin-block-end: 15px;
-  max-width: 355px;
+  max-width: 375px;
   height: 117px;
+
 }
 
 .card-section {
@@ -229,7 +229,6 @@ border-bottom-color: currentColor;
   line-height: 1.3; /* Межстрочный */
   font-size: 18px;
   font-weight: 700;
-
 }
 
 .content__paragraph {
@@ -262,7 +261,14 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-block-start: 100px;
+  margin-block-start: 10px;
+  
+}
+
+.content-picture{
+  display: grid;
+  gap: 10px;
+  padding-bottom: 10px;
   
 }
 
