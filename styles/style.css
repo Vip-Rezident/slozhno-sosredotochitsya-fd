@@ -182,10 +182,12 @@ border-bottom-color: currentColor;
 }
 
 .title-decor {
+  display: flex;
+  justify-content: flex-end;
   background-color: var(--accent-color, #ff0070);
   max-width: 375px;
-  height: 117px;
   margin-top: 51px;
+  height: 117px;
 }
 
 .card-section {
@@ -231,9 +233,6 @@ border-bottom-color: currentColor;
 
 .content__title-block { /* Заголовок 3 уровня */
   background-color: #ff0070;
-
-
-  
 }
 
 .section-picture {
