@@ -46,8 +46,10 @@
   color: var(--accent-color);
   justify-content: end;
   min-height: 668px;
+  height: 100vh;
   max-width: 375px;
   padding: 10px;
+  position: relative;
 }
 
 .header__theme-menu {
@@ -319,6 +321,7 @@ border-bottom-color: currentColor;
   display: grid;
   grid-auto-flow: column; /* Указывает, что элементы должны располагаться в строках */
   gap: 13px; /* Расстояние между элементами */
+  min-height: 668px;
   height: 100vh; /* Высота блока равна высоте окна браузера */
   font-weight: bold;
   align-items: center;
@@ -327,6 +330,7 @@ border-bottom-color: currentColor;
 
 .end-title {
  display: grid;
+ position: relative;
  max-width: 375px; 
  min-height: 668px;
  margin-block-start: 45px;
