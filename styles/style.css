@@ -209,7 +209,7 @@ border-bottom-color: currentColor;
 }
 
 .content__text-title {/* Подзаголовок */
-  display: flex;
+  display: grid;
   justify-content: start;
   background-color: #ff0070;
   color: var(--text-decor_color, #000028);
@@ -276,17 +276,18 @@ border-bottom-color: currentColor;
 }
 
 .card-section_three .paragraph {
-  margin-block-start: 16px;
+  margin-block-start: 12px;
+
 }
 
 .content__text-block {/* блок */
   align-self: center;
   min-height: var(--font-size);
-  margin-block-start: 18px;
+  margin-block-start: 20px;
 }
 
 .content-list {
-  margin-block-start: px;
+  padding-block-start: 6px;
 }
 
 .section-picture {
@@ -295,7 +296,7 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-block-start: 45px;
+  margin-block-start: 50px;
   
 }
 
