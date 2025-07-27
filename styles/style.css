@@ -38,18 +38,30 @@
   font-size: var(--main-font-size, 1.125rem); /* Добавляем резиновый шрифт */
 }
 
+
 .header {
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
-  grid-template-columns: auto;
   font-family: var(--font-family);
   color: var(--accent-color);
-  justify-content: end;
   min-height: 668px;
   height: 100vh;
-  max-width: 375px;
   padding: 10px;
   position: relative;
+}
+
+@media (width >= 768px) {
+  .header {
+    min-block-size: 1024px;
+  
+
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    min-block-size: 768px;
+  }
 }
 
 .header__theme-menu {
@@ -101,16 +113,17 @@ border-bottom-color: currentColor;
 }
 
 @media (width >= 768px) {
-  .decorated-block {
+  .decorated-zone {
     min-block-size: 1024px;
-    /* Остальные стили */
+    max-width: 768px;
+    padding-top: 130px;
   }
 }
 
 @media (width >= 1024px) {
-  .decorated-block {
-    min-block-size: 768px;
-    /* Остальные стили */
+  .decorated-zone {
+    min-block-size: 1024px;
+    max-width: 1024px;
   }
 }
  
@@ -172,24 +185,38 @@ border-bottom-color: currentColor;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   color: #db00ff;
   text-shadow: 4px 4px 0 var(--accent-color, #ff0070);
-  line-height: .85;
+  line-height: .83;
   max-width: 375px;
 }
 
-.title__union{
-  display: block;
-  justify-self: left;
-  
+@media (width >= 768px) {
+  .title {
+    min-block-size: 1024px;
+    
+  }
+}
+
+@media (width >= 1024px) {
+  .title {
+  clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)
+  }
 }
 
 .title-decor {
-  display: flex;
-  justify-content: flex-end;
   background-color: var(--accent-color, #ff0070);
   max-width: 375px;
-  margin-top: 51px;
+  margin-top: 55px;
   height: 117px;
 }
+
+@media (width >= 768px) {
+  .title-decor {
+    min-block-size: 1024px;
+    width: 50%;
+    justify-self: end;
+  }
+}
+
 
 .card-section_one {
   display: grid;
