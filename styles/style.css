@@ -53,8 +53,6 @@
 @media (width >= 768px) {
   .header {
     min-block-size: 1024px;
-  
-
   }
 }
 
@@ -191,14 +189,17 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .title {
-    min-block-size: 1024px;
+    align-self: end;
+    justify-self: start;
+     white-space: nowrap;
+     padding-bottom: 110px;
     
   }
 }
 
 @media (width >= 1024px) {
   .title {
-  clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem)
+  font-size: (7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -211,8 +212,7 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .title-decor {
-    min-block-size: 1024px;
-    width: 50%;
+    align-self:;
     justify-self: end;
   }
 }
