@@ -331,6 +331,10 @@ border-bottom-color: currentColor;
     grid-template-columns: 1fr 470px;
     max-width: 768px;
     align-items: start;
+    padding-block-start: 60px;
+  }
+  .card-section_three .title-card{
+    width: 270px;
   }
 }
 
@@ -363,6 +367,21 @@ border-bottom-color: currentColor;
   
 }
 
+@media (width >= 768px) {
+  .section-picture{
+  max-width: 768px;
+  grid-template-rows: auto 1f; /* Заголовок и основное содержимое */
+  grid-template-columns: 1fr 1fr; /* Две колонки */
+  gap: 20px; /* Промежуток между элементами */ 
+  align-items: start;
+  }
+
+   .section-picture .content__text-title h2{
+    grid-template-rows: 768px;
+   }
+}
+
+
 .content-picture{
   display: grid;
   gap: 10px;
@@ -390,6 +409,13 @@ border-bottom-color: currentColor;
   font-weight: bold;
   align-items: center;
   justify-content: center;
+}
+
+@media (width >= 768px) {
+  .footer h2 {
+    max-width: 768px;
+  
+  }
 }
 
 .end-title {
