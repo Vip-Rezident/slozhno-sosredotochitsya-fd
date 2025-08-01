@@ -289,7 +289,7 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-block-start: 100px;
+  padding-block-start: 50px;
 }
 
 @media (width >= 768px) {
@@ -298,7 +298,6 @@ border-bottom-color: currentColor;
     max-width: 768px;
     padding-left: 28px;
     padding-block-start: 60px;
-    
   }
     .card-section_two .title-card {
     justify-content: start;
@@ -325,6 +324,14 @@ border-bottom-color: currentColor;
   align-items: center;
   justify-content: center;
   padding-block-start: 50px;
+}
+
+@media (width >= 768px) {
+  .card-section_three {
+    grid-template-columns: 1fr 470px;
+    max-width: 768px;
+    align-items: start;
+  }
 }
 
 .card-section_three .content__text-title {
