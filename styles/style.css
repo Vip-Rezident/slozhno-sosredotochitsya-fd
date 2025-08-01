@@ -413,8 +413,17 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .footer h2 {
-    max-width: 768px;
+  max-width: 100%;
   
+  }
+
+  #ander {
+    width: 768px;
+   padding-block-start: 300px;
+  }
+
+  .end-title{
+   width: 768px;
   }
 }
 
