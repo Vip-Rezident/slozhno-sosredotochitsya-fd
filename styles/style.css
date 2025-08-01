@@ -172,7 +172,7 @@ border-bottom-color: currentColor;
  .content-section {
   display: grid;
   justify-content: center;
-  max-width: 375px;
+  max-width: 100%;
   padding: 0 10px;
  }
 
@@ -212,7 +212,6 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .title-decor {
-    align-self:;
     justify-self: end;
   }
 }
@@ -225,6 +224,15 @@ border-bottom-color: currentColor;
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+}
+
+@media (width >= 768px) {
+  .card-section_one {
+    grid-template-columns: 280px 1fr;
+    max-width: 768px;
+    align-items: start;
+  
+  }
 }
 
 .card-section_one .paragraph:not(:last-of-type) {/* У крайнего изоображения нет отступа */
