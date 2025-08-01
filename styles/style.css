@@ -231,7 +231,10 @@ border-bottom-color: currentColor;
     grid-template-columns: 280px 1fr;
     max-width: 768px;
     align-items: start;
-  
+  }
+  .title-card{
+  padding: 20px 20px 0 20px;
+  width: 250px;  
   }
 }
 
@@ -252,8 +255,8 @@ border-bottom-color: currentColor;
 
 
 .title-card { /* Заголовок 2 уровня */
- color: var(--accent-color);
-
+  display: grid;
+  color: var(--accent-color);
 }
 
 
@@ -286,7 +289,25 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-block-start: 50px;
+  padding-block-start: 100px;
+}
+
+@media (width >= 768px) {
+  .card-section_two {
+    grid-template-columns: 1fr;
+    max-width: 768px;
+    padding-left: 28px;
+    padding-block-start: 60px;
+    
+  }
+    .card-section_two .title-card {
+    justify-content: start;
+    padding: 20px 0 0 0;
+    width: 200px;
+  }
+    .card-section_two .content-text {
+    white-space: nowrap; /* Текст в строку */
+  }
 }
 
 .card-section_two .content__text-title {
