@@ -369,16 +369,16 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .section-picture{
-  max-width: 768px;
-  grid-template-rows: auto 1f; /* Заголовок и основное содержимое */
-  grid-template-columns: 1fr 1fr; /* Две колонки */
-  gap: 20px; /* Промежуток между элементами */ 
-  align-items: start;
+    justify-content: start;
+    max-width: 768px;
   }
-
-   .section-picture .content__text-title h2{
-    grid-template-rows: 768px;
-   }
+  .section-picture .picture{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Количество колонок автоматически подстраивается под размер экрана */
+  grid-template-rows: auto; /* Заголовок и основное содержимое */
+  padding: 30px 0 0 30px;
+  gap: 20px;
+  }
 }
 
 
