@@ -213,6 +213,9 @@ border-bottom-color: currentColor;
 @media (width >= 768px) {
   .title-decor {
     justify-self: end;
+  width: 360px;
+  margin-right: 10px;
+  margin-top: 50px;
   }
 }
 
@@ -403,6 +406,12 @@ border-bottom-color: currentColor;
     .section-picture .img5{
     grid-column: span 2;
   } 
+
+   .section-picture .content-picture{
+    margin-bottom: 20px;
+  
+  }
+  
 }
 
 
@@ -437,18 +446,31 @@ border-bottom-color: currentColor;
 
 @media (width >= 768px) {
   .footer h2 {
-  max-width: 100%;
-  
+  max-width: 768px
+
   }
 
   #ander {
     width: 768px;
-   padding-block-start: 300px;
+   padding-block-start: 490px;
+   padding-block-end: 600px;
   }
 
-  .end-title{
-   width: 768px;
+  .footer.end-title{
+   max-width: 768px;
+   max-height: 1024px;
   }
+
+  .footer.end-title::before{
+  top: 45px;
+  right: 20px;
+  }
+
+  .footer.end-title::after {
+    left: 20px;
+    bottom: 0;
+  }
+
 }
 
 .end-title {
