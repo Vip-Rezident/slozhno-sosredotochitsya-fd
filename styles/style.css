@@ -363,7 +363,7 @@ border-bottom-color: currentColor;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-block-start: 50px;
+  margin-block-start: 48px;
   
 }
 
@@ -371,26 +371,50 @@ border-bottom-color: currentColor;
   .section-picture{
     justify-content: start;
     max-width: 768px;
+    padding: 30px 0 0 30px;
   }
   .section-picture .picture{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Количество колонок автоматически подстраивается под размер экрана */
+  grid-template-columns: 1fr 1fr 1fr; /* Количество колонок автоматически подстраивается под размер экрана */
   grid-template-rows: auto; /* Заголовок и основное содержимое */
-  padding: 30px 0 0 30px;
   gap: 20px;
   }
+
+  .section-picture .img1{
+    grid-column: span 2;
+  } 
+  
+    .section-picture .img2{
+    grid-row: span 2;
+    object-fit: cover;
+    height: 100%;
+  }  
+  
+    .section-picture .img3{
+    grid-row: span 2;
+    object-fit: cover;
+    height: 100%;
+  } 
+  
+    .section-picture .img4{
+    justify-content: center;
+  }    
+
+    .section-picture .img5{
+    grid-column: span 2;
+  } 
 }
+
 
 
 .content-picture{
   display: grid;
-  gap: 10px;
   margin-bottom: 10px;
   
 }
 
 .section-picture .picture__card:not(:last-of-type) {/* У крайнего изоображения нет отступа */
-  margin-block-end: .5em;
+  margin-block-end: .3em;
 }
 
 .picture__card {
@@ -432,7 +456,7 @@ border-bottom-color: currentColor;
  position: relative;
  max-width: 375px; 
  min-height: 668px;
- margin-block-start: 45px;
+ margin-block-start: 35px;
 }
 
 .end-title::before { /* верхний правый уголок */
